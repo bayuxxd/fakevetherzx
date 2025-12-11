@@ -20,7 +20,12 @@ app.get('/health', (req, res) => {
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'uy2.html'));
 });
-
+app.get('/nodeMy.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'uy2.html'));
+});
+app.get('/style.css', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'uy2.html'));
+});
 // 4. Fallback Route (WAJIB DITARUH PALING BAWAH)
 // Kalau user asal ketik URL yang tidak ada, balikin lagi ke home
 app.get('*', (req, res) => {
